@@ -11,19 +11,19 @@ Steps:
 
 1. Create a new OMNeT++ project. (empty project with no src, simulation folders) (OR) Use OMNeT++ GUI to add this project using git and select OMNeT++ project when prompted.
 
-2. In project properties, make sure to add the 'inet'project and the 'simulte projedct as references.
+2. In project properties, make sure to add the 'inet' project and the 'simulte project as references.
 
-3. Build project
+3. Build the project.(uske make from command line or build the rpoject using the OMNeT++ GUI)
 
 4. Start simulation using either of the provided INI files (basicD2D.ini or multiD2D.ini)
 
-P.S: If you want to run parallel simulations (using opp_runall), make sure to add the simulte/src directory in the list of sources while executing the command.
+P.S: If you want to run parallel simulations (using opp_runall), make sure to add the 'simulte/src/' directory in the list of sources while executing the command.
 
 For e.g.: 
 Assuming all 3 projects (simD2D, simulte and inet) are present in the same directory. And the simD2D directory is the current directory,
 To simulate the config: 'TestDistanceStored' (it has 260 simulation runs) from basicD2D.ini, the command would be:
 
-opp_runall -j${nproc} ./simD2D -u Cmdenv -c TestDistanceStored -r 0..259 -n .:../inet/src/:../simulte/src/ basicD2D.ini
+    opp_runall -j${nproc} ./simD2D -u Cmdenv -c TestDistanceStored -r 0..259 -n .:../inet/src/:../simulte/src/ basicD2D.ini
 
 (the command 'nproc' is available natively in linux and in Windows via the minGW environment - It returns the number of logical cores provided by the CPU)
 
