@@ -26,7 +26,9 @@ To simulate the config: _TestDistanceStored_ (it has 260 simulation runs) from _
 
 `opp_runall -j${nproc} ./simD2D -u Cmdenv -c TestDistanceStored -r 0..259 -n .:../inet/src/:../simulte/src/ basicD2D.ini`
 
-(the command _nproc_ is available natively in linux and in Windows via the bash shell found in developer mode for Windows 10 (or) via minGW/cygwin environment  - It returns the number of logical cores provided by the CPU, u can replace it by an integer value depicting the number of cores you would want to use for running parallel simulations - please ensure that you have sufficient memory while running parallel simulations).
+(the command _nproc_ is available natively in linux and in Windows via the bash shell found in developer mode for Windows 10 (or) via minGW/cygwin environment  - It returns the number of logical cores provided by the CPU.)  
 
-For eg. to use 4 cores for the parallel simulation, replace __-j${proc}__ by __-j4__
+You can replace _nproc_ by an integer value depicting the number of cores you would want to use for running the parallel simulations (please ensure that you have sufficient memory while running parallel simulations).
+
+For eg., to use 4 cores for the parallel simulation, replace __-j${proc}__ by __-j4__
 
