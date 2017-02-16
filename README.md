@@ -30,5 +30,5 @@ To simulate the config: _TestDistanceStored_ (it has 260 simulation runs) from _
 
 You can replace _nproc_ by an integer value depicting the number of cores you would want to use for running the parallel simulations (please ensure that you have sufficient memory while running parallel simulations).
 
-For eg., to use 4 cores for the parallel simulation, replace __-j${proc}__ by __-j4__
+For eg., to use 4 cores for the parallel simulation, replace __-j${nproc}__ by __-j4__
 
